@@ -15,6 +15,9 @@ class UserController extends Controller
         $user->email=$request->input('email');
         $user->password=Hash::make($request->input('password'));
         $user->save();
-        return $user;
+        return "done";
+    }
+    public function send(){
+        return "hi";
     }
 }
