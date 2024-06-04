@@ -20,4 +20,16 @@ class UserController extends Controller
     public function send(){
         return "hi";
     }
+
+    public function login(request $req){
+        $user = User::where('email',$req->email)->first();
+        if(!$user || !Hash::check($req->password,$user->password)){
+
+           return response ([ "Error"=>["email or password incorrect"]
+
+    ]);
+}
+        return $user;
+    }
+
 }

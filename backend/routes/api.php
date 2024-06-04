@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 Use App\Http\Controllers\UserController;
@@ -20,4 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::POST("/register",[UserController::class,'register']);
 Route::GET("/send",[UserController::class,"send"]);
+Route::GET("/login",[UserController::class,"login"]);
+Route::Post("/add",[ProductController::class,'addProduct']);
 
