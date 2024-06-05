@@ -23,4 +23,11 @@ Route::POST("/register",[UserController::class,'register']);
 Route::GET("/send",[UserController::class,"send"]);
 Route::GET("/login",[UserController::class,"login"]);
 Route::Post("/add",[ProductController::class,'addProduct']);
+Route::get("/list",[ProductController::class,'productList']);
+Route::delete("/delete/{id}",[ProductController::class,'deleteProduct']);
+Route::get("/product/{id}",[ProductController::class,'getProduct']);
+Route::put("/updateproduct/{id}",[ProductController::class,'updateProduct']);
+Route::get("/search/{key}",[ProductController::class,'searchProduct']);
+
+
 

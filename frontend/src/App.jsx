@@ -4,8 +4,9 @@ import AddProduct from "./AddProduct";
 import Update from "./Update";
 import Register from "./Register";
 import Login from "./Login";
-
+import Search from "./Search";
 import "./App.css";
+import List from "./List";
 // import Protected from "./Protected";
 
 function App() {
@@ -14,9 +15,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/add" element={<AddProduct />} />
-          <Route path="/update" element={<Update />} />
+          <Route path="/list" element={<List />} />
+          <Route path="/update/:id" element={<Update />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/search" element={<Search />} />
         </Routes>
       </BrowserRouter>
     </div>
